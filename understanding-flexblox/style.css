@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex-container {
+    height: 400px;
+    background-color: #f4f4f4;
+
+    /* When a flexbox is initalized, the flexitems will change their positions */
+    /* The default direction is horizontal/X-axis */
+    display: flex;
+
+    /* To change the default behaviour of flex-direction from row to column */
+    /* flex-direction: column; */
+
+
+    /*------------------------- JUSTIFY CONTENT ------------------------- */
+    /* Justify content pertains to the main axis */
+    /* The main axis of flex-direction: row is "horizontal/Y-Axis" */
+    /* The main axis of flex-direction:column is "vertical/X-Axis" */
+    /* This will move all the flexitem to the very end of the main axis, the default main axis of flexbox is X-axis */
+    /* justify-content: end; */
+
+    /* This will move all the flexitem to the very start of the main axis. */
+    justify-content: start;
+
+    /* This will move all the flexitem to the center of the main axis. */
+    /* justify-content: center; */
+
+    /* What space-around does is, it takes the remaining empty space  and puts it around all the elements,  */
+    /* includind at the begining and at the end */
+    /* justify-content: space-around; */
+
+    /* What space-between does is, it takes the remaining empty space and puts it between all the elements, */
+    /* it doesn't add any space in the beginging and end  */
+    /* justify-content: space-between; */
+
+
+    /*------------------------- ALIGN ITEMS ------------------------- */
+    /* Align items pertains to the cross axis */
+    /* The cross axis of flex-direction: row is "veritcal/X-Axis" */
+    /* The cross axis of flex-direction:column is "horizontal/Y-Axis" */
+    /* For this property to work we need to set the "height" first of the container, so that there's some place, */
+    /* we can move them or align them */
+    /* This will move all the flexitem to the very end of the cross axis, Y-axis */
+    /* align-items: end; */
+
+    /* This will move all the flexitem to the very start of the cross axis. */
+    /* align-items: start; */
+
+    /* This will move all the flexitem to the center of the main axis. */
+    /* align-items: center; */
+
+
+    /*------------------------- FLEX WRAP ------------------------- */
+    /* This property will wrap the flex items when there is no room for more items (move the items to a next line), */
+    /* it helps with reponsivness of a website */
+    /* flex-wrap: wrap; */
+}
+
+.item {
+    width: 300px;
+    height: 100px;
+    background: #254de4;
+    color: #fff;
+    margin: 10px;
+
+
+    /* We can make a flex-item, a flex-container for a new flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+/* We can use psedu selectors to grab one of the items as we don't have individual id's, this will select the third item in the container */
+/* .item:nth-of-type(3) {
+    height: 50px;
+    width: 50px; */
+
+
+/*------------------------- ALIGN SELF ------------------------- */
+/* Align-self is used for placing the actual item, while align-items is for the container.*/
+/* You can set is to center and push the item to the center on main axis. */
+/* You can set is to start and push the item to the top/start on main axis. */
+/* You can set is to end and push the item to the botton/end on main axis. */
+/* align-self: center; */
+
+
+/*------------------------- JUSTIFY SELF ------------------------- */
+/* Justify-self is used for placing the actual item, while justify-items is for the container.*/
+/* You can set is to center and push the item to the center on cross axis. */
+/* You can set is to start and push the item to the top/start on cross axis. */
+/* You can set is to end and push the item to the botton/end on cross axis. */
+/* justify-content: center; */
+/* } */
+
+
+/*------------------------- ORDER ------------------------- */
+/* To change the position/order of the flex items without changing the html */
+/* .item:nth-of-type(1) {
+    order: 2;
+}
+.item:nth-of-type(2) {
+    order: 1;
+}
+.item:nth-of-type(3) {
+    order: 3;
+} */
+
+
+/*------------------------- FLEX BASIS ------------------------- */
+/* It is set on the item, and it is going to be the width of the box */
+
+/* .item:nth-of-type(2) {
+    flex-basis: 200px;
+} */
+
+
+/*------------------------- FLEX GROW ------------------------- */
+/* It is a factor of the flex-item's main size and it is specified as 1, 2 ,3 and so on. Default is 0 */
+/* It's the rate at which the flex-item's will grow */
+/* .item:nth-of-type(1) {
+    flex-grow: 1;
+}
+.item:nth-of-type(2) {
+    flex-grow: 2;
+}
+.item:nth-of-type(3) {
+    flex-grow: 1;
+} */
+
+
+/*------------------------- FLEX SHRINK ------------------------- */
+/* It is a factor of the flex-item's main size and it is specified as 1, 2 ,3 and so on. Default is 0 */
+/* It is the rate at which the flex-item's will shrink */
+/* .item:nth-of-type(1) {
+    flex-shrink: 1;
+}
+.item:nth-of-type(2) {
+    flex-shrink: 3;
+}
+.item:nth-of-type(3) {
+    flex-shrink: 2;
+} */
+
+
+/*------------------------- FLEX  ------------------------- */
+/* It is a shorthand for flex-grow, flex-shrink and flex-basis */
+.item {
+    flex: 1 0 200px;
+
+    /* or */
+    flex: 1;
+}
+
+
+
